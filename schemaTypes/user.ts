@@ -52,6 +52,14 @@ export default defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'locations',
+      title: 'Sedes Asignadas',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'location'}]}],
+      description: 'Sedes donde este usuario es anfitrión',
+      hidden: ({document}) => document?.role !== 'host',
+    }),
     // Optional fields
     defineField({
       name: 'address',
