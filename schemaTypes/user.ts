@@ -62,31 +62,17 @@ export default defineType({
     }),
     // Optional fields
     defineField({
-      name: 'address',
-      title: 'Dirección',
-      type: 'string',
-    }),
-    defineField({
-      name: 'city',
-      title: 'Ciudad',
-      type: 'string',
-    }),
-    defineField({
-      name: 'country',
-      title: 'País',
-      type: 'string',
-    }),
-    defineField({
-      name: 'postalCode',
-      title: 'Código Postal',
-      type: 'string',
-    }),
-    // Optional fields
-    defineField({
       name: 'isActive',
       title: 'Usuario Activo',
       type: 'boolean',
       initialValue: true,
+    }),
+    defineField({
+      name: 'deletedAt',
+      title: 'Fecha de Eliminación',
+      type: 'datetime',
+      description: 'Campo para soft delete - no eliminar físicamente',
+      readOnly: true,
     }),
     defineField({
       name: 'createdAt',

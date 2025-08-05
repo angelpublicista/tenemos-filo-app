@@ -73,11 +73,6 @@ export default defineType({
           title: 'País',
           type: 'string',
         },
-        {
-          name: 'coordinates',
-          title: 'Coordenadas',
-          type: 'geopoint',
-        },
       ],
     }),
     defineField({
@@ -119,6 +114,13 @@ export default defineType({
       title: 'Sede Activa',
       type: 'boolean',
       initialValue: true,
+    }),
+    defineField({
+      name: 'deletedAt',
+      title: 'Fecha de Eliminación',
+      type: 'datetime',
+      description: 'Campo para soft delete - no eliminar físicamente',
+      readOnly: true,
     }),
     defineField({
       name: 'createdAt',
