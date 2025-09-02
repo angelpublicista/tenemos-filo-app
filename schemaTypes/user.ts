@@ -53,6 +53,18 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'typeDocument',
+      title: 'Tipo de Documento',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'documentNumber',
+      title: 'Número de Documento',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'locations',
       title: 'Sedes Asignadas',
       type: 'array',
